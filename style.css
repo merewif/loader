@@ -12,7 +12,7 @@
 }
 
 #logohover:hover {
-  animation: spin 0.75s infinite linear;
+  animation: spin 0.75s 1 ease-in-out;
 }
 
 #middle {
