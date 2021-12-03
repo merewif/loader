@@ -40,7 +40,7 @@ body {
   text-decoration: none;
 }
 
-#content:hover a {
+#middle:hover a {
   color: #A50C0E;
   animation-duration: 0.75s;
 }
