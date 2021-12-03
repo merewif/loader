@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;900&display=swap');
 
-
-body {
-  background: linear-gradient(147deg, rgba(0,0,0,1) 0%, rgba(165,12,14,1) 100%); 
-}
-
 #logobox {
   visibility: hidden;
 }
@@ -199,4 +194,18 @@ body {
   transform: scaleX(1);
 }
 
+.background {
+  background: linear-gradient(90deg, #000000, #A50C0E, #000000);
+  background-size: 300% 300%;
+  animation: gradient 5s alternate infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
 
+@keyframes gradient {
+  0% { background-position: 0%; }
+  100% { background-position: 100%; }
+}
