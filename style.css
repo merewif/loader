@@ -41,8 +41,6 @@
 #loader {
    width: 150px;
    height: 150px;   
-   margin: 0;
-   background: transparent;
    border-top: 6px solid #A50C0E;
    border-left: 6px solid #A50C0E;
    border-radius: 50%;
