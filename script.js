@@ -3,6 +3,7 @@ function hide() {
     document.getElementById('loader').style.display = 'none';
     document.getElementById('logohover').style.visibility = 'visible'; 
     document.getElementById('content').style.visibility = 'visible'; 
+    document.getElementById('background').style.visibility = 'visible'; 
 }
 
 window.addEventListener ("load", function() {
@@ -39,4 +40,6 @@ $(document).ready(function(){
         $('.explanation').not('#explanation6').slideUp('slow');
         $('#explanation6').slideToggle('slow');
     });
+    
 });
+

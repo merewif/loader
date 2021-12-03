@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background"></div>
+    <div class="background" id="background"></div>
     <div id="loaderbox">
         <div id="loader"></div>
     </div>
@@ -29,11 +29,6 @@
             <div id="explanation3" class="explanation">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci consequuntur atque nesciunt maxime! Inventore odit numquam doloribus sequi nihil.</p>
             </div>
-            <!--            
-            <img src="https://images.unsplash.com/photo-1603122553657-971f8e10f2b1">
-            <img src="https://images.unsplash.com/photo-1603122553657-971f8e10f2b1">
-            <img src="https://images.unsplash.com/photo-1603122553657-971f8e10f2b1">>
-            -->
         </div>
         <div id="middle"><a href="https://github.com/merewif/loader">Repository</a></div>
         <div class="boxcontainers">
@@ -41,19 +36,33 @@
             <div id="upper5" class="upper"><p>styling</p></div>
             <div id="upper6" class="upper"><p>to do</p></div>
             <div id="explanation4" class="explanation">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci consequuntur atque nesciunt maxime! Inventore odit numquam doloribus sequi nihil.</p>
+                <p>jQuery for toggling a div on click. The slideUp method hides any other active divs to only show the one the user clicked on.</p>
+                <div class="snippet"><code>
+    $(document).ready(function(){
+    $('#upper1').click(function() {
+        $('.explanation').not('#explanation1').slideUp('slow');
+        $('#explanation1').slideToggle('slow');
+        });
+    });
+            </code></div>
             </div>
             <div id="explanation5" class="explanation">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci consequuntur atque nesciunt maxime! Inventore odit numquam doloribus sequi nihil.</p>
+                <ul>
+                    <li>Font: <a href="https://fonts.google.com/specimen/Montserrat">Montserrat</a> by Google</li>
+                    <li>Dynamic background by <a href="pocoloco.io">pocoloco.io</a></li>
+                    <li>Color scheme adjusted to "brand" colors.</li>
+                    <li>Hover animations for enganced interactivity.</li>
+                    <li>Loader animation for occupying user attention (can hurt SEO).</li>
+                </ul>
             </div>
             <div id="explanation6" class="explanation">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci consequuntur atque nesciunt maxime! Inventore odit numquam doloribus sequi nihil.</p>
+                <ul>
+                    <li>Accomodate for long divs.</li>
+                    <li>Better solution for positioning.</li>
+                    <li>Make page responsive.</li>
+                    <li>Color active card.</li>
+                </ul>
             </div>
-            <!--  
-            <img src="https://images.unsplash.com/photo-1516245266743-983948b98d53">
-            <img src="https://images.unsplash.com/photo-1516245266743-983948b98d53">
-            <img src="https://images.unsplash.com/photo-1516245266743-983948b98d53">
-            -->
         </div>
     </div>
 

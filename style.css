@@ -198,11 +198,15 @@
   background: linear-gradient(90deg, #000000, #A50C0E, #000000);
   background-size: 300% 300%;
   animation: gradient 5s alternate infinite;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+#background {
+  visibility: hidden;
 }
 
 @keyframes gradient {
@@ -216,7 +220,22 @@
   text-align: justify;
   hyphens: auto;
   color: white;
-  width: 620px;
+  width: 625px;
   padding: 15px;
   display:none;
+  margin-top: 2px; 
+}
+
+.explanation a {
+  color: white !important;
+  text-decoration: underline !important;
+}
+
+code {
+  font-size: 1.2em;
+  white-space: pre;
+}
+
+.snippet {
+  border-left: 3px dotted #A50C0E;  
 }
