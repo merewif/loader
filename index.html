@@ -16,7 +16,7 @@
         <div id="loader"></div>
     </div>
     <div id="content">   
-        <img id="logohover" src="sharingan-hover.png" width="100" height="100">
+        <img id="logo" src="sharingan-hover.png" width="100" height="100">
         <div class="boxcontainers">
             <div id="upper1" class="upper"><p>Loader</p></div>
             <div id="upper2" class="upper"><p>logo</p></div>
@@ -25,7 +25,17 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci consequuntur atque nesciunt maxime! Inventore odit numquam doloribus sequi nihil.</p>
             </div>
             <div id="explanation2" class="explanation">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci consequuntur atque nesciunt maxime! Inventore odit numquam doloribus sequi nihil.</p>
+                <p>Placeholder for brand logo; non-looped fancy spin animation on hover.</p>
+                <div class="snippet"><code>
+    #logo:hover {
+        animation: spin 0.75s 1 ease-in-out;
+    }
+
+    @keyframes spin {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }  
+                </code></div>
             </div>
             <div id="explanation3" class="explanation">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci consequuntur atque nesciunt maxime! Inventore odit numquam doloribus sequi nihil.</p>
