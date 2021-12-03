@@ -18,11 +18,24 @@
     <div id="content">   
         <img id="logo" src="sharingan-hover.png" width="100" height="100">
         <div class="boxcontainers">
-            <div id="upper1" class="upper"><p>Loader</p></div>
+            <div id="upper1" class="upper"><div class="title"><p>Preloader</p></div></div>
             <div id="upper2" class="upper"><p>logo</p></div>
             <div id="upper3" class="upper"><p>hover</p></div>
             <div id="explanation1" class="explanation">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci consequuntur atque nesciunt maxime! Inventore odit numquam doloribus sequi nihil.</p>
+                <p>Preloader using CSS pseudo-elements and JavaScript. The element is a div with rounded corners, the two other spinning lines are its ::before and ::after elements. Adjacent borders give the spinning lines a sharp edge and different animation durations for all 3 lines add a positively chaotic feel to the design.</p>
+                <div class="snippet"><code>    
+    function hide() {    
+        document.getElementById('loaderbox').style.display = 'none';  
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('logo').style.visibility = 'visible'; 
+        document.getElementById('content').style.visibility = 'visible'; 
+        document.getElementById('background').style.visibility = 'visible'; 
+    }
+    
+    window.addEventListener ("load", function() {
+        setTimeout(hide, 3000);
+    })
+                </code></div>
             </div>
             <div id="explanation2" class="explanation">
                 <p>Placeholder for brand logo; non-looped fancy spin animation on hover.</p>
@@ -38,8 +51,25 @@
                 </code></div>
             </div>
             <div id="explanation3" class="explanation">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci consequuntur atque nesciunt maxime! Inventore odit numquam doloribus sequi nihil.</p>
-            </div>
+                <p>Hover effect utilizing CSS pseudoelements and scaling transformation on the Y axis for horizontal effect or on the X axis for vertical effect.  A "useless" translateZ() function was added so the element gets its own composite layer.</p>
+                <div class="snippet"><code>
+    .upper {
+        transform: perspective(0) translateZ(0); 
+    }
+        
+    .upper:before {
+        content: "";
+        transition-property: transform;
+        transform: scaleY(0);
+        transition-duration: 0.25s;
+        transition-timing-function: ease-in-out;
+    }
+         
+    .upper:hover:before {
+        transform: scaleY(1);
+    }
+                </code></div>
+                </div>
         </div>
         <div id="middle"><a href="https://github.com/merewif/loader">Repository</a></div>
         <div class="boxcontainers">

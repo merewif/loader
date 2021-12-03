@@ -4,7 +4,6 @@
   max-width: 100px;
   width: 100px;
   height: auto;
-  transform-origin: 50% 50%;
   position: relative;
   left: 42%;
   text-align: center;
@@ -33,7 +32,6 @@
 
 #middle:hover a {
   color: #A50C0E;
-  animation-duration: 0.75s;
 }
 
 #middle {
@@ -60,16 +58,16 @@
 }
 
 #loader {
-   width: 150px;
-   height: 150px;   
-   border-top: 6px solid #A50C0E;
-   border-left: 6px solid #A50C0E;
-   border-radius: 50%;
-   animation: 1s spin linear infinite;
-   position: relative;
-   top: 40%;
-   left: 45%;
-   transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;   
+  border-top: 6px solid #A50C0E;
+  border-left: 6px solid #A50C0E;
+  border-radius: 50%;
+  animation: 1s spin linear infinite;
+  position: relative;
+  top: 40%;
+  left: 45%;
+  transform: translate(-50%, -50%);
 } 
 
 #loader::before, #loader::after {
@@ -116,10 +114,8 @@
   width: 217px;
   display: inline-block;
   transform: perspective(0) translateZ(0); 
-  /* ^ need to apply 3d transform to the element, so it will get its own composite layer */
   position: relative;
   background: black;
-  transition-duration: 0.3s;
   font-family: 'Montserrat';
   font-weight: 900;
   color: #A50C0E;
@@ -129,11 +125,7 @@
   font-size: 1.5em;  
 }
 
-.upper:hover {
-  color: black;
-}
-
-.upper:before {
+.upper::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -142,19 +134,19 @@
   left: 0;
   right: 0;
   background: #A50C0E;
-  transform: scaleY(0);
-  transform-origin: 50%;
   transition-property: transform;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
+  transform: scaleY(0);
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
 }
 
-.upper:hover {
+.upper:hover p {
   color: black;
 }
 
-.upper:hover:before {
+.upper:hover::before {
   transform: scaleY(1);
+  
 }
 
 #middle {
@@ -165,11 +157,10 @@
   position: relative;
   background: #A50C0E;
   color: black;
-  transition-duration: 0.3s;
   width: 660px;
 }
 
-#middle:before {
+#middle::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -179,18 +170,17 @@
   right: 0;
   background: black;
   color: white;
-  transform: scaleX(0);
-  transform-origin: 50%;
   transition-property: transform;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
+  transform: scaleX(0);
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
 }
 
 #middle:hover {
   color: #A50C0E;
 }
 
-#middle:hover:before {
+#middle:hover::before {
   transform: scaleX(1);
 }
 
@@ -232,7 +222,7 @@
 }
 
 code {
-  font-size: 1.2em;
+  font-size: 1em;
   white-space: pre;
 }
 
