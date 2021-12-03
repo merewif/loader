@@ -57,7 +57,7 @@
         transform: perspective(0) translateZ(0); 
     }
         
-    .upper:before {
+    .upper::before {
         content: "";
         transition-property: transform;
         transform: scaleY(0);
@@ -65,7 +65,7 @@
         transition-timing-function: ease-in-out;
     }
          
-    .upper:hover:before {
+    .upper:hover::before {
         transform: scaleY(1);
     }
                 </code></div>
