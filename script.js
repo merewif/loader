@@ -7,10 +7,3 @@ function hide() {
 window.addEventListener ("load", function() {
     setTimeout(hide, 3000);
 })
-
-/*  
-    If the loading process is too short, use
-    window.addEventListener ("load", function() {
-        setTimeout(hide, 3000);
-    })  
-*/
