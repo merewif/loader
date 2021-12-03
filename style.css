@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;900&display=swap');
 
+
 body {
   background: linear-gradient(147deg, rgba(0,0,0,1) 0%, rgba(165,12,14,1) 100%); 
 }
@@ -32,6 +33,16 @@ body {
   width: 660px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: black;
+}
+
+#content a {
+  color: black;
+  text-decoration: none;
+}
+
+#content:hover a {
+  color: #A50C0E;
+  animation-duration: 0.75s;
 }
 
 #middle {
