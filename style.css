@@ -228,3 +228,7 @@ code {
 .snippet {
   border-left: 3px dotted #A50C0E;  
 }
+
+.upper {
+  cursor: pointer;
+}
